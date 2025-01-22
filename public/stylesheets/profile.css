@@ -1,0 +1,214 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  /* display: flex;
+  justify-content: center;
+  align-items: flex-start; */
+  min-height: 100vh;
+ 
+}
+
+.profile-pic-container {
+  position: relative;
+  width: 150px; /* Adjust as needed */
+  height: 150px; /* Adjust as needed */
+  border: 1px solid rgb(182, 182, 185);
+  border-radius: 50%;
+  background-color: #999495;
+}
+/* Header Styling */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: #cecece8c;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #e60023;
+}
+
+.logout-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* .username {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+} */
+
+.logout-btn {
+  text-decoration: none;
+  padding: 8px 15px;
+  background-color: #e60023;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #bf001d;
+}
+
+
+
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover;
+}
+
+.edit-icon {
+  position: absolute;
+  bottom: 10px; /* Adjust the position as needed */
+  right: 10px; /* Adjust the position as needed */
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 20px; /* Adjust icon size */
+  color: black;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Header */
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  margin-top:40px;
+ 
+}
+.add-post-btn{
+  text-decoration: none;
+  padding: 10px 15px;
+  margin-left:15px;
+  background-color: #e60023;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight:bold ;
+  transition: background-color 0.3s ease;
+}
+.edit-btn{
+  text-decoration: none;
+  padding: 8px 15px;
+  margin-left: 30px;
+  background-color: #999495;
+  color: black;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+
+.logoutsection{
+  display: flex;
+  justify-content: space-between;
+}
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #e2e2e2;
+}
+
+.profile-info {
+  flex: 1;
+
+}
+.profile-info h3{
+  margin-bottom: 30px;
+  color: #676565;
+}
+
+
+.alluploads{
+  padding: 20px;
+
+}
+
+.alluploads h2{
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.masonry-columns {
+  column-count: 4; /* Number of columns */
+  column-gap: 20px; /* Space between columns */
+}
+
+.masonry-item {
+  break-inside: avoid; /* Prevents breaking inside columns */
+  margin-bottom: 20px; /* Space between items */
+}
+
+.masonry-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: filter 0.3s ease;
+}
+
+.masonry-item img:hover {
+  filter: brightness(80%);
+ 
+}
+
+/* Responsive Design for Masonry Grid */
+@media (max-width: 1024px) {
+  .masonry-columns {
+    column-count: 3; /* Reduce columns for smaller screens */
+  }
+  .header{
+    padding:10px 5px;
+    
+  }
+}
+
+@media (max-width: 768px) {
+  .masonry-columns {
+    column-count: 2; /* Single column for small screens */
+  }
+
+}
+
+
+

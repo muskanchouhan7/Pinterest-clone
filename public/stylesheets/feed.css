@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #cecece8c;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 50px;
+    height: auto;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #e60023;
+  }
+  
+  .logout-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .logout-btn {
+    text-decoration: none;
+    padding: 8px 15px;
+    background-color: #e60023;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-btn:hover {
+    background-color: #bf001d;
+  }
+  
+  
+.container{
+    padding: 30px;
+    margin-top: 50px;
+  }
+
+  .box {
+    column-count: 4; /* Number of columns */
+    column-gap: 20px; /* Space between columns */
+  }
+  
+  .pin{
+    break-inside: avoid; /* Prevents breaking inside columns */
+    margin-bottom: 20px; /* Space between items */
+    text-align: center;
+
+  }
+  
+  .pin img {
+    margin-bottom:5px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    transition: filter 0.3s ease;
+  }
+
+  .pin img:hover {
+    filter: brightness(80%);
+  }
+  
+  /* Responsive Design for Masonry Grid */
+  @media (max-width: 1024px) {
+    .box {
+      column-count: 3; /* Reduce columns for smaller screens */
+    }
+    .header{
+      padding:10px 5px;
+      
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .box {
+      column-count: 2; /* Single column for small screens */
+    }
+  }

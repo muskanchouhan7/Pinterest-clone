@@ -1,0 +1,90 @@
+html, body {
+  overflow: hidden;
+  height: 100%;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Light gray background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.content {
+  background: white;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+
+}
+.img1 {
+  max-width: 150px;
+  margin-bottom: 15px;
+}
+
+.header {
+  font-size: 35px;
+  margin: 0 0 1.5rem;
+  color: #333;
+}
+
+.detail {
+  padding: 20px; 
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  font-size: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn {
+  padding:15px;
+  font-size: 20px;
+  margin-top: 15px;
+  font-weight: bold;
+  color: white;
+  background-color: #e60023; /* Pinterest red */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #cc0020; /* Darker red for hover */
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #666;
+}
+
+footer b {
+  color: #333;
+}
+
+footer a {
+  text-decoration: none;
+  color: #e60023;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid #ccc;
+}

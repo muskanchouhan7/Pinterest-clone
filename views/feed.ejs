@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/feed.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+          <img
+            src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png"
+            alt="Pinterest Logo"
+            class="logo"
+          />
+        </div>
+  
+        <div class="logout-section">
+        <nav class="nav-links">
+          <a href="/profile">Profile</a>
+          <a href="/feed">Feed</a>
+        </nav>
+          <a href="/logout" class="logout-btn">Log Out</a>
+        </div>
+      </header>
+
+<div class="container"> 
+    <div class="box">
+        <% posts.forEach(function(elem){ %>
+        <div class="pin">
+          <img src="/images/uploads/<%= elem.image %>" alt="Pin Image" />
+          <h5 class="pin-caption"><%= elem.title %></h5>
+          <h6>@<%= elem.user.username %></h6>
+        </div>
+        <% }) %>
+      </div>
+     
+ <!-- <div class="box">
+               <a href="https://gallery1.charleskdesigns.com/image/001.jpg" >
+               <img src="https://gallery1.charleskdesigns.com/image/001.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div>  -->
+
+
+
+</div>
+
+</body>
+                 
+
+</html>
+
+
+
+
+
+

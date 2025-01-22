@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="/stylesheets/profile.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-container">
+        <img
+          src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png"
+          alt="Pinterest Logo"
+          class="logo"
+        />
+      </div>
+
+      <div class="logout-section">
+        <nav class="nav-links">
+          <a href="/profile">Profile</a>
+          <a href="/feed">Feed</a>
+        </nav>
+
+        <a href="/logout" class="logout-btn">Log Out</a>
+      </div>
+    </header>
+
+    <div class="profile-header">
+      <!-- this form is hidden on the page, but it is used to enable user to add profile picture -->
+      <form
+        id="profileUploadForm"
+        hidden
+        action="/fileupload"
+        method="post"
+        enctype="multipart/form-data"
+      >   
+      <!-- In this form, method="post"
+        enctype="multipart/form-data" are making sure the profile picture get uploaded (using multer)  -->
+        <input type="file" name="profileimage" />
+      </form>
+      <div class="profile-pic-container">
+        <img
+          src="/images/uploads/<%= user.dp %>"
+          
+          class="profile-pic"
+        />
+        <i id="editProfileIcon" class="ri-pencil-fill edit-icon"></i>
+      </div>
+
+      <div class="profile-info">
+        <h2><%= user.fullname %></h2>
+        <h3>@<%= user.username %></h3>
+        <a href="/edit" class="edit-btn"> Edit </a>  
+        <a href="/add" class="add-post-btn">Add New Post</a>
+        <!-- <form
+            action="/upload"
+            method="post"
+            enctype="multipart/form-data"
+            class="upload-form"
+          >
+            <input
+              type="text"
+              name="filecaption"
+              placeholder="Caption"
+              class="upload-caption"
+            />
+            <input type="file" name="file" class="upload-file" />
+            <input type="submit" value="Upload" class="upload-btn" />
+          </form> -->
+      </div>
+    </div>
+
+    <div class="alluploads">
+      <h2>Your Uploaded Pins</h2>
+      <div class="masonry-columns">
+        <% user.posts.forEach(function(post) { %>
+        <div class="masonry-item">
+          <img src="/images/uploads/<%= post.image %>" alt="Image" />
+        </div>
+
+        <% }) %>
+      </div>
+    </div>
+
+    <script>
+      // whenever somebody clicks on add profile icon , we are enabling click on input of the add profile form , and bc of that input will let us open media and add a profile pic
+      document
+        .querySelector("#editProfileIcon")
+        .addEventListener("click", function () {
+          document.querySelector("#profileUploadForm input").click();
+        });
+
+        // when input gets changed i.e, when any file(image) gets selected then submit the form.
+      document
+        .querySelector("#profileUploadForm input")
+        .addEventListener("change", function () {
+          document.querySelector("#profileUploadForm").submit();
+        });
+    </script>
+  </body>
+</html>

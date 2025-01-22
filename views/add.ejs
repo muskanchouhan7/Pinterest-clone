@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/add.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-container">
+        <img
+          src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png"
+          alt="Pinterest Logo"
+          class="logo"
+        />
+      </div>
+
+      <div class="logout-section">
+        <nav class="nav-links">
+          <a href="/profile">Profile</a>
+          <a href="/feed">Feed</a>
+        </nav>
+        <a href="/logout" class="logout-btn">Log Out</a>
+      </div>
+    </header>
+
+    <h1>Create new post</h1>
+
+    <div class="addFormContainer">
+      <form
+        action="/addpost"
+        method="post"
+        enctype="multipart/form-data"
+        class="upload-form"
+      >
+        <input type="file" name="postimage" class="upload-file" />
+
+        <input
+          type="text"
+          name="posttitle"
+          placeholder="Title"
+          class="upload-caption"
+        />
+
+        <textarea placeholder="Description" name="postdesc"></textarea>
+
+        <input type="submit" value="Create Post" class="upload-btn" />
+      </form>
+    </div>
+  </body>
+</html>
